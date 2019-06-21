@@ -1,5 +1,7 @@
 var orm = require("../config/orm.js");
 
+
+// code that calls ORM functions
 var burger = {
   selectAll: function(callback) {
     orm.selectAll("burgers", function(res) {
@@ -19,11 +21,11 @@ var burger = {
     });
   },
 
-  deleteOne: function(condition, callback) {
-    orm.deleteOne("burgers", condition, function(res) {
-      callback(res);
-    });
-  }
+//   deleteOne: function(condition, callback) {
+//     orm.deleteOne("burgers", condition, function(res) {
+//       callback(res);
+//     });
+//   }
 };
 
 module.exports = burger;
